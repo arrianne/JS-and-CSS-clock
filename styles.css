@@ -1,6 +1,6 @@
 
   html {
-    background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+
     background-size:cover;
     font-family:'helvetica neue';
     text-align: center;
@@ -8,6 +8,8 @@
   }
 
   body {
+    background-color: #45CEEF;
+    -webkit-animation: pulse 60s infinite alternate;
     margin: 0;
     font-size: 2rem;
     display:flex;
@@ -48,4 +50,13 @@
     transform: rotate(90deg);/* clock hands start off horizontal so this just aligns them vertically */
     transition: all 0.5s; /* This part causes a glitch but fixed in clock.js now. */
     transition-timing-function: cubic-bezier(0, 2.25, 0.58, 1);
+  }
+
+
+  @-webkit-keyframes pulse {
+        0% {background-color: #45CEEF;}
+       25% {background-color: #FFF5A5;}
+       50% {background-color: #FFD4DA;}
+       75% {background-color: #99D2E4;}
+       100% {background-color: #D8CAB4;}
   }
