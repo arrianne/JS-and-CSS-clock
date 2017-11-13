@@ -45,7 +45,7 @@
     position: absolute;
     top:50%;
     transform-origin: 100%;
-    transform: rotate(90deg);
-    transition: all 0.5s;
+    transform: rotate(90deg);/* clock hands start off horizontal so this just aligns them vertically */
+    transition: all 0.5s; /* This part causes a glitch but fixed in clock.js now. */
     transition-timing-function: cubic-bezier(0, 2.25, 0.58, 1);
   }
