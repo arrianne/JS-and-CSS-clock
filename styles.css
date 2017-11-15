@@ -12,13 +12,16 @@
     -webkit-animation: pulse 60s infinite alternate;
     margin: 0;
     font-size: 2rem;
-    display:flex;
+    /*display:flex;*/
     flex:1;
     min-height: 100vh;
     align-items: center;
+    text-align: center;
+
   }
 
   .clock {
+    /*display: none;*/
     width: 30rem;
     height: 30rem;
     border:20px solid white;
@@ -32,6 +35,12 @@
       inset 0 0 10px black,
       0 0 10px rgba(0,0,0,0.2);
   }
+
+  /*Possible moon shape for night time:
+  width: 80px;
+ height: 80px;
+ border-radius: 50%;
+ box-shadow: 15px 15px 0 0 red;*/
 
   .clock-face {
     position: relative;
@@ -53,10 +62,40 @@
   }
 
 
+
+
+
+
   @-webkit-keyframes pulse {
         0% {background-color: #45CEEF;}
        25% {background-color: #FFF5A5;}
        50% {background-color: #FFD4DA;}
        75% {background-color: #99D2E4;}
        100% {background-color: #D8CAB4;}
+  }
+
+
+  /*CSS to House */
+
+  #house {
+    position: relative;
+    overflow: hidden;
+    width: 100px;
+    height: 150px;
+    background-color: blue;
+    display: block;
+    margin: 0 auto;
+
+  }
+
+  .roof {
+    background: #dadcd1;
+    width: 0;
+  	height: 0;
+  	border-left: 50px solid transparent;
+  	border-right: 50px solid transparent;
+  	border-bottom: 50px solid red;
+    position: relative;
+    align-items: center;
+    text-align: center;
   }
