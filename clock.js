@@ -10,6 +10,8 @@ const allHands = document.querySelectorAll('.hand');
 function setDate() {
   const now = new Date();
 console.log(now.getHours() > 18);
+
+
   const seconds = now.getSeconds();
   const secondsDegrees = ((seconds / 60) * 360) + 90;
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
@@ -22,7 +24,13 @@ console.log(now.getHours() > 18);
   const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
   hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
+// changing the background class depending on time of day
 
+  if (now.getHours() < 17) {
+    document.body.classList.add("day");
+  } else {
+    document.body.classList.add("night");
+  }
 
 // https://medium.com/@mike_ekkel/javascript-30-day-2-css-js-clock-ae539f10a9f9
 
